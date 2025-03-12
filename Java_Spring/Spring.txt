@@ -1,0 +1,26 @@
+Startes são descritores de dependências, que são usados para facilitar a configuração de dependências
+
+Em relação a criação de componentes, não se usa o new quando precisa de um outro componente, deve-se usar a anotação @Autowired
+
+Você usa a anotação @Component quando você tem o código fonte dela, ou seja, você a criou, e a anotação @Bean quando você não tem o código fonte dela, ou seja, ela é de uma biblioteca, e tu usa a anotação @Autowired
+
+Singleton é quando só tem uma instância do componente, e Prototype é quando tem várias instâncias do componente
+Ou seja, singleton é quando só vai existir um daquela classe, e prototype tera várias instâncias
+
+Gerado por IA {
+A anotação @Configuration é usada para indicar que uma classe declara um ou mais métodos @Bean e pode ser processada pelo contêiner Spring para gerar definições de bean e solicitações de serviço em tempo de execução.
+
+A anotação @ConfigurationProperties é usada para vincular as propriedades externas (como as definidas em um arquivo application.properties ou application.yml) a uma classe Java. Isso permite que você agrupe propriedades relacionadas em uma classe e as injete em seus componentes Spring.
+
+Essas anotações se relacionam com application properties da seguinte forma: @ConfigurationProperties permite que você mapeie as propriedades definidas no arquivo application.properties para uma classe Java, facilitando a configuração e a manutenção das propriedades da aplicação.
+}
+
+Para conectar com o banco de dados, é necesário ter as seguintes informações no application.properties:
+spring.jpa.database-platform=org.hibernate.dialect. (e a lignuagem do banco de dados)
+spring.datasource.driverClassName=org.postgresql.Driver
+spring.datasource.url=jdbc:postgresql://localhost:5432/nome_do_banco
+spring.datasource.username=
+spring.datasource.password=
+
+
+O Spring data JPA é um projeto que facilita a implementação do padrão Repository por meio de AOP (Aspect Oriented Programming / Programação Orientada a Aspectos). Ele fornece uma abstração para trabalhar com dados armazenados em um banco de dados relacional. Substituindo o antigo DAO ao utilizar a interface Repository. 

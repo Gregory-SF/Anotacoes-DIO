@@ -1,0 +1,10 @@
+PADRÃO DE DEFINIÇÃO DE MÉTODOS
+
+<?visibilidade?> <?tipo?> <?modificador?> retorno nome(<?parâmetros?>) <?exceções?> corpo
+
+ONDE:
+
+V: public, protected, private
+T: concreto ou abstrato
+M: static ou final
+

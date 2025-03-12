@@ -1,0 +1,14 @@
+javadoc -encoding UTF-8 -docencoding ISO-8859-1 -d ../docs src/*.java
+// esse .. docs seria voltar uma pasta no dir e criar o docs
+// esse src/*.java pegaria na pasta src, todos os arq .java
+
+se vc usou a IDE pra criar o projeto do java, vai ter uma pasta bin com as classes do projeto
+para rodar pelo terminal, vc pode abrir a pasta no explorador de arq e abrir o cmd 
+dps ir para a pasta bin usando cd bin
+DPS só digitar 
+java <nome da classe sem extensão> <Parametros, se tiver, separados por espaços>
+
+tu fez mudanças no código e precisa compilar dnv o bin pra atualizar roda esse comando
+javac -d bin src/*.java
+
+e para executar direto pela IDE, se cria uma pasta .vscode, na qual vai ter um launch.json ai eu coloco mais ou menos nesse padrão

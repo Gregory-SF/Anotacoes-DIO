@@ -1,0 +1,87 @@
+comando pra criar um projeto maven
+//
+mvn archetype:generate -DgroupId=one.digitalinnovation -DartifactId=quick-start-maven -Darchetype=maven-archetype-quickstart -DinteractiveMode=false
+
+comando pra compilar - toda vez que rodar os arquivos java seram compilados na pasta target   
+mvn compile
+
+comando pra testar - toda vez que rodar, o maven vai encontrar as classes de teste no projeto e execute as respectivas validações de cada uma delas
+mvn test
+
+comando para empacotar - rodar esse comando vai empacotar o projeto em um arquivo jar no diretório target
+mvn package
+
+comando para limpar diretório de trabalho - no caso, remove o diretório target
+mvn clean
+
+tu public o teu repositório localmente, então tu pode usar como dependência
+mvn install
+
+ai se tu quiser usar essa dependência em outro projeto, tu pode adicionar ela no pom.xml do outro projeto, colando o groupId, artifactId e version do projeto "antigo"
+
+tem um arquétipo maven que é um arquétipo de organização de pastas para projetos, mas existtem outros arquétipos que podem ser usados
+
+o maven sempre vai procurar o arquivo pom.xml na raiz do projeto pra poder buildar ele, nele contém informações como nome do projeto, módulos, dependências, configurações de build, detalhes do projeto, configurações de ambiente, etc
+
+O básico do pom para funcionar é modelversion, groupid, artifactid, version, packaging, name
+o que tu não colocou no teu pom, o maven vai procurar no repositório do superpom que referencia o maven central
+
+Existem dois tipos de dependências diretas e transitivas, diretas são as que tu coloca no pom.xml e transitivas são as que as diretas dependem
+
+Existem 3 classpath no maven, compile, test e runtime
+
+Existem 6 tipos de escopo de dependência, compile, provided, runtime, test, system e import
+
+fica assim no pom
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-core</artifactId>
+    <version>5.1.5.RELEASE</version>
+    <scope>compile</scope>
+</dependency>
+
+Compile é o escopo padrão(default) que o maven vai usar se não especificar nada, ele é disponível em todos os classpaths e é transitivo
+
+Provided é quando a dependência é fornecida em tempo de execução por meio de uma implementação na jdk ou conteiner, ela aparece no classpath de compilação e teste, e não é transitivo
+ex: servlet-api e javaee-api
+
+Runtime é uma dependência necessária para execução e não para compliição, disponível no classpath de tempo de execução e teste, mas não em compilação, e é transitivo
+
+Test é uma dependência necessária para compilação e execução de testes, mas não para execução, disponível no classpath de teste e não é transitivo
+
+System é parecido com provided, mas tu especifica o caminho do jar, vai no classpath de compile e test, mas não no runtime, não é transitiva, não é recomendado usar, pois o maven não vai gerenciar a dependência
+
+<dependencies>
+    <dependency>
+        <groupId>com.programmergirl</groupId>
+        <artifactId>my-dependency</artifactId>
+        <version>1.0</version>
+        <scope>system</scope>
+        <systemPath>${basedir}/lib/my-dependency.jar</systemPath>
+    </dependency>
+
+Import é para dependências do tipo pom com a tag <dependencyManagement>
+
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>com.programmergirl</groupId>
+            <artifactId>my-dependency</artifactId>
+            <version>1.0</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+
+mvn dependecy:build-classpath -DincludeScope=runtime
+mvn dependecy:build-classpath -DincludeScope=compile
+mvn dependecy:build-classpath -DincludeScope=test
+
+Exitem 3 ciclos de vida do maven, clean, default e site
+Defdaul é o ciclo de vida padrão, que é executado quando tu não especifica nenhum ciclo de vida
+Clean é o ciclo de vida na qual se limpa o repositório target
+Site é o ciclo de vida que gera a documentação do projeto
+
+pra usar o puglin
+mvn plugin:goal

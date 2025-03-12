@@ -1,0 +1,60 @@
+
+API's, servidores e clientes se comunicam na internet por meio de um protocolo de comunicação. Esse protocolo rege a comunicação e determina o comportamento das partes 
+
+Browser -> implementa o cliente HTTP
+Servidor -> host objetos web
+
+Cliente - Mensagens - Request HTTP - obejtos web
+
+Servidor - Mensagens - Response HTTP - protocolo TCP
+
+Arquitetura Client-server é stateless, ou seja, não guarda o estado do cleinte, então se solicitar 2 vezes vai realizar 2 vezes, então ele não vai detectar redundância pois ele não armazena o estado do cliente
+
+
+Os métodos
+GET solicita um recurso do serivodr - método seguro
+HEAD é um GET sem corpo de resposta, só o head dela - método seguro
+POST submete uma entidade a um recurso
+PUT substituição de recursos pelos dados da requisição
+DELETE remoção de um recurso
+TRACE chamada de loop-back para um determinado recurso
+OPTION opções de comunicação com recurso - método seguro
+CONNECT tunelamente identificado pelo recurso
+PATCH modificação parical
+
+Métodos seguros são aqueles que não acarretam em modificações do estado, são operações de leitura, (read-only), por isso eles também são Idempotente
+
+Todo método seguro é um Idempotente, mas nem todo método Idempotente é um método seguro
+
+Idempotente significa que não importa o número de vezes que for executado o resultado vai ser o mesmo, tipo atualizar as informações de um dado, fazer isso várias vezes vai só salvar o dado nada mais PUT
+É diferente de criar, que se você rodar várias vezes vai aumentar o tamanho POST
+Bem relacionado a requisições, se tu rodar criar várias várias vezes, vai criar várias instâncias, mas se tu atualizar várias vezes, só vai mudar o resultado uma vez, saca
+Boas práticas de rest, nos endpoints, você usa substantivo se necessário, não verbo
+
+HTTP status code
+100 - 199 Information Response
+200 - 299 Successful Response
+300 - 399 Redirection Response
+400 - 499 Client Error Response
+500 - 599 Server Error Response
+
+Entity
+Request Method e Status code
+
+Campos
+Entity Header
+Entity Body
+
+O Header tem diversas informações como Request Method, Protocolo, Status Code, Content Type, Data, Accept (que traz algumas definições), Content Lenght, etc
+
+O HTTP é stateless (Não salva o estado do cliente) e é client/servidor. Mas então, como salva as informações do cliente? Por meio dos cookies. Os cookies ficam dentro do header file
+
+
+-------------------------------------
+Criptografia por chave
+
+Existem 2 formas
+Assimétrica - Chave privada e chave pública
+Funciona de um jeito que apenas a pessoa 
+
+Simétrica - chave unica privada

@@ -1,0 +1,4 @@
+Mostra as chamadas em pilha
+
+Thread.dumpStack();
+

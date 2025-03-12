@@ -1,0 +1,58 @@
+Collection
+collection é um objeto q agrupa múltiplos elementos (variáveois primitivas ou objetos) dentro de umd única unidade
+
+--------------------------------------------------------------------------------
+possiveis plugins do intelij
+atom
+git tool box
+key promoter
+nyan 
+one dark theme 
+rainbow brackets
+--------------------------------------------------------------------------------
+
+List
+Usar vector quando se falar de thread pq é única que é threads safe
+
+Usar ArrayList quando precisar fazer bastante busca
+Usar LinkedList quando tiver que fazer bastante inserção e remoção
+
+dps rever os vídeos conhecendo os métodos list part 1 e 2 pra pegar os métodos e anotar
+
+PARA Poder fazer a classe ser ordenada naturalmente, a classe deve implementar a interface comparable e sobreescrever o método compareTo
+
+-------------------------------------------------------------------------------
+Set
+
+Não permite valores duplicados
+A interface set não tem índice
+não tem os métoods set, get e indexOf
+
+Treeset 
+Automaticamente bota em ordem natural (menor pra maior)
+
+Hashset
+Automaticamente bota aleatório
+
+-------------------
+Map 
+
+tem elementos únicos (chaves) para cada valor (Value) esse value pode ser de varios tipos no mesmo map
+
+Linked
+
+HaseTable 
+é thread safe
+
+Treemap 
+usar bastante quando tem comparação
+demora mais um pouco
+ordem natural
+
+LinkedHashMap
+tem a mesma performance
+ordem de iniciação
+
+HashMap
+tem a mesma performance
+itera aleatoriamente

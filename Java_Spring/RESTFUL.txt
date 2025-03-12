@@ -1,0 +1,17 @@
+
+Implementar recursos HTTP para interação de arquivos JSON e para isso recomenda usar a arquitetura REST
+
+Enfim, a arquitetura REST funciona no sentido que os cliente irão fazer requisições para os serviços que estão no servidor, e o servidor irá responder com um JSON
+
+API (Application Programming Interface) é um código que serve coo ponte entre duas aplicaçãoes, permitindo que elas se comuniquem entre si	
+
+Criado por IA {
+A API REST (Representational State Transfer) é um estilo de arquitetura de software que define um conjunto de restrições para a criação de serviços web. Os serviços web que seguem essas restrições são chamados de serviços web RESTful.
+}
+
+Para que a arquitetura seja RESTful, ela deve seguir os seguintes princípios:
+Cliente-servidor
+Interface uniforme
+Stateless
+Cache
+Camadas

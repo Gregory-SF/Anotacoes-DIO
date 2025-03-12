@@ -1,0 +1,18 @@
+Classe anônima
+
+Classe que não receber nome e é declarado e instânciado em uma única instrução. É usada quando precisa criar uma classe que só sera instânciada uma vez
+
+"Insira o código normal aqui"
+
+"Insira o código com classe anônima aqui"
+
+Functional Interface
+
+Qualquer interface que tenha um SAM (Single Abstract Method), ou seja, pode ter vários métodos, mas apena 1 método abstrato, no qual a implementação pode ser tratada com uma expressão lambda
+
+Função Lambda
+
+Uma função lambda é uma função sem declaração, não precisa de nome, tipo do retorno nem o modificador de acesso. Ela deve ser usada no mesmo lugar que for declarada. Tendo a sintaxe definida como (argumento) -> (corpo)
+
+Reference Method
+é um recurso que permite fazer referência a um metódo ou construtor ed uma classe. Basta usar :: e o nome do método sem parênteses no final, serve pra simplificar lambdas

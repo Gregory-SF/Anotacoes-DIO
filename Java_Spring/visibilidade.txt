@@ -1,0 +1,4 @@
+Private só vai ser visível na classe que foi criada
+Protected Dentro da classe, subclasses de dentro ou fora do mesmo pacote pacote
+Default: Tem acesso a um atributo default (identificado pela ausência de modificadores) todas as classes que estiverem no mesmo pacote que a classe que possui o atributo.
+

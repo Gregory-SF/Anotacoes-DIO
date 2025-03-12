@@ -1,0 +1,15 @@
+Exceções em Java
+
+Em Java, uma exceção é um evento que ocorre durante a execução de um programa que interrompe o fluxo normal das instruções. Quando uma exceção ocorre, um objeto de exceção é criado e entregue ao sistema de execução (runtime system). Esse objeto contém informações sobre o erro, incluindo seu tipo e o estado do programa quando o erro ocorreu.
+
+Existem dois tipos principais de exceções em Java: checked exceptions e unchecked exceptions.
+
+Checked Exceptions:
+Checked exceptions são aquelas que o compilador força o programador a tratar. Elas são verificadas em tempo de compilação. Isso significa que, se um método pode lançar uma checked exception, ele deve declarar isso usando a cláusula `throws`, e o código que chama esse método deve tratar a exceção usando um bloco `try-catch` ou propagar a exceção novamente. Exemplos comuns de checked exceptions incluem `IOException`, `SQLException`, e `ClassNotFoundException`.
+
+Unchecked Exceptions:
+Unchecked exceptions são aquelas que o compilador não força o programador a tratar. Elas são verificadas em tempo de execução. Unchecked exceptions são subclasses de `RuntimeException` e geralmente indicam erros de programação, como lógica incorreta ou uso inadequado de uma API. Exemplos comuns de unchecked exceptions incluem `NullPointerException`, `ArrayIndexOutOfBoundsException`, e `IllegalArgumentException`.
+
+Em resumo, a principal diferença entre checked e unchecked exceptions é que checked exceptions são verificadas em tempo de compilação, enquanto unchecked exceptions são verificadas em tempo de execução. É importante tratar adequadamente as exceções em seu código para garantir que seu programa possa lidar com situações inesperadas de maneira robusta e previsível.
+
+** Infelizmente produzido pelo copilot pois perdi alguns arquivos de anotação

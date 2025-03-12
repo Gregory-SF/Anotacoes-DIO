@@ -1,0 +1,10 @@
+Upcast (transforma filha pra mãe)
+Upcast  (A É uma superclasse e B é uma Subclasse de A)
+A a = new B();
+
+Isso funciona bem dboa pq B extend A, pois B é uma subclasse
+Não precisa fazer nada explicícito, dessa forma já tá bom
+
+Downcast (transforma mãe pra filha) quase não usado
+Downcast (A É uma superclasse e B é uma Subclasse de A)
+B a = (B) new A();

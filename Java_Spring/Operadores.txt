@@ -1,0 +1,3 @@
+^ É O OPERADOR LÓGICO XOR EM JAVA
+
+^ é o operador lógico xor, ou seja, o ou exclusivo, só vai retornar true se 1 deles for true e outro for false
