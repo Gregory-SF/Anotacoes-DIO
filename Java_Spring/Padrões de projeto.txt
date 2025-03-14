@@ -1,0 +1,6 @@
+Padrões de projeto são soluções consolidadas para problemas recorrentes no desenvolvimento e manutenção de software. Eles são divididos em três categorias: criacionais, estruturais e comportamentais. Alguns exemplos de padrões de projeto são: Singleton, Factory Method, Abstract Factory, Builder, Prototype, Adapter, Composite, Decorator, Facade, Flyweight, Proxy, Chain of Responsibility, Command, Interpreter, Iterator, Mediator, Memento, Observer, State, Strategy, Template Method e Visitor.
+
+Strategy defini um padrão a ser usado
+
+Padrão comportamental
+Strategy serve como uma interface básica para simplificar a variação de algoritmos para a resolução de um mesmo problema
