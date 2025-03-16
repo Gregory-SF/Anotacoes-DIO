@@ -1,0 +1,41 @@
+Existem 3 planos de hospdagem
+
+Plano de Consumo:
+Dimnesiona automaticamente e você paga apenas quando as funções estiverem em excução
+
+Plano Premium
+Plano Dedicado (Serviço de Aplicativo)
+
+Um controlador de escala monitora a taxa de eventos para determinar se deve aumentar ou reduzir
+O número de instâncias pode ser reduzidos a zero quando nenhuma função está em excução em um aplicativo de funções
+A próxima solicitação tem a latência (inicialização a frio) de escala de zero para um
+
+Um único aplicativo de funções só é escalado horizontalmente para no máximo 200 instâncias
+
+O gatilho de HTTP é o mais rápido e ele pode alocar novas instâncias uma vez por segundo, já outros não HTTP alocam uma vez a cada 30 segundos
+
+Gatilho é entrada de dados, in
+Associações de entrada e saída usam in e out, respectivamente
+Algumas associações tem suporte para uma direção especial, inout. Se você usar inout, apenas o editor avançado está disponível na guia integrar no portal
+
+Três planos de hospedagem básicos:
+Plano de Consumo
+Plano Premium
+Plano dedicado (Serviço de Aplicativo)
+
+Plano de Consumo
+O plano de hospedagem padrão. 
+Ele dimensiona automaticamente e você paga apenas quando as funções estiverem em execução. 
+As instâncias do host do Functions são adicionadas e removidas de maneira dinâmica com base no número de eventos de entrada.
+
+Plano Premium
+Usa trabalhadores pré-aquecidos para dimensionar automaticamente com base na demanda.
+É executado em instâncias mais poderosas e se conecta a redes virtuais.
+Plano dedicado
+Execute suas funções em um plano do Serviço de Aplicativo com taxas regulares do Plano do Serviço de Aplicativo.
+Melhor para cenários de execução longa em que o Durable Functions não pode ser usado.
+
+Duração do tempo limite do aplicativo de funções
+A propriedade functionTimeout no arquivo de projeto host.json especifica a duração do tempo limite.
+O plano de consumo tem um tempo limite padrão de 5 minutos e um tempo limite máximo de 10 minutos.
+Os planos Premium e Dedicado têm um tempo limite padrão de 30 minutos e nenhuma duração máxima.

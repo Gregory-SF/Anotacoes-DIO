@@ -1,0 +1,8 @@
+É uma forma segura de salvar informações importantes
+
+Tem gerenciamento de segredos (permite gerenciar credenciais com senhas e chaves de api)
+para armazenamento seguro e controle rigosoro
+Gerenciamento de chaves (usando criptografia)
+usado como uma solução de gerenciamento de chaves
+Gerenciamento de certificados 
+para certificados SSL/TLS

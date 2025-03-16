@@ -1,0 +1,1 @@
+O nome do endpoint sempre possui o nome do storage account e o nome do serviço de armazenamento, separados por um ponto e terminar com core.windows.net Exemplo: `<storageaccount>.blob.core.windows.net`.

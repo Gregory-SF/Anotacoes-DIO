@@ -1,0 +1,21 @@
+SAS (Assinatura de acessos compartilhado) é um URI assinado que aponta para um ou mais recursos de armazenamento e inclui um token que contém um conjunto especial de parâmetros de consulta
+O token indica como os recursos podem ser acessados pelo cliente
+Existem 3 tipos de chavees SAS (Assinatura de acessos compartilhado)
+SAS de delegação do usuário (é quando o usuário tá usando uma credencial e tem permissão espescífica para delegar um arquivo para outra pessoa usar por meiio de uma chave sas dentro de um blob ou seja, é só pra blob)
+SAS de serviço (É protegido por chave de conta, que essa chave de conta delega quem vai acessar oq pode delegar qualquer serviço)
+SAS de conta (Delega um acesso mais geral pra uma conta)
+
+Práticas recomendadas
+O mais seguro é o delegação de usuário
+Sempre usar https
+defina o tempo de expiração para o menor tempo útil
+aplique a regra de privilégios mínimos necessários
+O SAS nem sempre é a soluão correrta
+
+componentes da chave sas
+sp=r controla o direito de acesso. Os valores podem ser *a* para adicionar *c* para criar, *d* para excluir, *l* para listar, *r* prar ler ou *w* para gravar
+st=2020-01-20T11:42:32Z A data e a hora em que o acesso é iniciado
+se=2020-01-20T19:42:32Z A data e a hora em que o acesso termina, este exemplo permite o acesso por 8 horas
+sv=2019-02-02 versão da API de armazenamento a ser usada
+sr=b O tipo de armazenamento que está sendo acessado. Neste exemplo b é para blob
+sig=<...> a assinatura criptográfica

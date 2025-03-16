@@ -1,0 +1,23 @@
+O Azure Cosmos DB é um banco de dados NoSQL
+ele tem baixa latência e escalabilidade eslástica da taxa transferencia
+
+Oferece 5 modelos de consistência vai do eventual até o forte
+eventual, eventual replica os dados mundialmente, mas bem desorganizado e não rapidamente
+prefixo coerente, um pouco mais organizado, vem com um certo padrão de organização, é um pouco melhor que o eventual
+sesion, o cara deu exemplo da integração insta e face, se alguém que tem isso e posta um story, ele consegue ver os dois juntos, mas se alguém posta na autrália, ele ve no insta primeiro e beeem dps ve no face, na verdadefalei merda, dentro daquela sessão (insta) a atualização é na hora, em outra sessão/app, já não
+desatualização limitada, é parecido com o forte, mas ela espera as outras réplicas estarem meio de boa pra poder replicar
+forte, criou no brasil, no mesmo momento já replica pro resto do mundo
+
+Em relação à latência, é baixíssima, bagulho de 10 ms
+
+a Extrutura é conta, db, conteiner, item
+No caso, no container pode ser armazenado varias coisas além de itens, tipo 
+- procedimentos armazenados
+- funções definidas pelo usuário
+- intens
+- gatilhos
+- conflitos
+- procedimentos de mesclagem
+
+Um container pode ser uma collection, uma tabela, um graph, etc
+um item pode ser um documento (mongoDB), um row (azure cosmos), um nó(sql), uma borda(cassandra)

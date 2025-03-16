@@ -1,0 +1,24 @@
+O armazenamento em BLOB é utilizado para armazenar imagens e documentos
+
+Blob é um endereço binário, da pra virar um url pra acessar o blob
+da pra controlar o acesso do armazenamento, tipo se vai ser só leitura ou escrita, isso é por segurança
+
+
+Ciclo de vida de armazenamento
+Frequente escreve e le toda horizontalmente leitura e escrita mais caro
+esporádico, acessados com pouca frequência escritas barato leitura cara
+frio raramente acessados que exigem recuperação rápida armazenamento mais barato, escrita mesmo preço e a leitura mais cara
+arquivo dados raramente acessados com requisitos de latência flexíveis leitura é mais demorada e mais cara e o armazenamento é mais barato
+
+Passando da camada Frequente pra arquivo o preço pra armazenar diminui mas para acessar aumenta
+
+Você pode criar políticas para decidir quando o blob vai descer para arquivo
+Da pra criar  por shell
+pra reidratatr um blob é só clicaer e mudar a camada
+
+bibliotecas
+blobClient quer mexer no blob 
+blobContainerClient quer mexer em container
+blobServiceClient trocar o nível de acesso dos containers e istar os containers
+appendBlobClient é pra mexer em log
+BlockBlobClient pra mexer em coisas grandes em blob

@@ -1,0 +1,51 @@
+az group list --query "[].{id:name}" -o tsv "Lista os grupos de recursos que você tem"
+az group list --query "[].{id:name}" -o tsv "Lista os grupos de recursos que você tem só que mais simples"
+az webapp up -g AZ-204 -n apphtml01g --html "é pra botar o app na azure, tipo o git push esse -g é de resource group -n é pro nopme do app"
+az webapp up -g <nome do resource group> -n <nome do webapp> --html "é pra botar o app na azure, tipo o git push esse -g é de resource group -n é pro nopme do app"
+az webapp log tail --name apphtml01g --resource-group AZ-204 "É pra mostrar os logs do app, o --name é igual -n,e --resource-group é o mesmo que -g"
+az webapp log tail --name <nome do webapp> --resource-group <nome resource group> "É pra mostrar os logs do app, o --name é igual -n,e --resource-group é o mesmo que -g"
+az webapp list --resource-group AZ204-LAB001 --query "[?starts_with(name, 'img')]"
+az webapp list --resource-group AZ204-LAB001 --query "[?starts_with(name, 'img')].{Name:name}" --output tsv
+az webapp deployment source config-zip --resource-group AZ204-LAB001 --src api.zip --name imgapigregsfer001
+az webapp deployment source config-zip --resource-group AZ204-LAB001 --src web.zip --name imgwebgregsfer001
+func init --worker-runtime dotnet-isolated --target-framework net8.0 --force
+func new --template "HTTP trigger" --name "Echo"
+func new --template "Time trigger" --name "Recurring"
+func start --build "vai fazer rodar "
+func azure functionapp publish funclogicgreg --dotnet-version 8.0
+az group creater --name az204-acr-rg --location eastus
+az acr create --resource-group az204-acr-rg --name acrdemoaz204greg --sku Basic
+echo FROM mcr.microsoft.com/hello-world > Dockerfile
+az acr build --image sample/hello-world:c1 --registry acrdemoaz204greg --file Dockerfile . 
+az acr repository list --name acrdemoaz204greg "mostra as imgs acho" 
+az acr repository show-tags --name acrdemoaz204greg --repository sample/hellow-world
+az acr run --registry acrdemoaz204greg --cmd '$Registry/sample/hello-world:v1' /dev/null "executar a imagem"
+az group delete --name az-acr-rg --no-wait 
+DNA_NAME_LABEL=aci-example-hsouza-$RANDOM
+az extension add --name containerapp --upgrade
+az provider register --namespace Microsoft.App
+az provider register --namespace Microsoft.OperationalInsights
+# Pra criar variavel de ambiente é só colocar o nome da variável e o valor dela por exemplo myLocation=eastus ai pra uzar usa um $
+# O '\' serve pra pular linha no cli, fica mais organizado
+myRG=az204-appcont-rg
+myLocation=eastus
+myAppContEnv=az204-env-hsouza-$RANDOM
+
+az group create --name $myRG --location $myLocation
+
+az containerapp env create --name $myAppContEnv --resource-group $myRG --location eastus
+
+# tá criando o ambiente (environment) do containerapp
+
+az containerapp create \
+    --name my-container-app \ 
+    --resource-group az204-appcont-rg \
+    --environment $myAppContEnv \
+    --image mcr.microsoft.com/azuredocs/containerapps-helloworld-latest \ 
+    --target-port 80 \
+    --query properties.confdiguration.ingress.fqdn
+
+chomod -R +xr ~/ipcheck
+az keyvault create --name $myKeyVault --resource-group az204-vault-rg --location $myLocation
+az keyvault secret set --vault-name $myKeyVault  --name "ExamplePass" --value "climaco-dio"
+az keyvault secret show --name "ExamplePassword" --vault-name $myKeyVault

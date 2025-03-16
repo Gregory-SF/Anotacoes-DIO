@@ -1,0 +1,10 @@
+O microsoft Entra ID é um serviço de gerenciamento de identidades e acesso baseado em nuvem do Microsoft Azure. Isso permite as pessoas acessarem a nuvem e aplicativos que estão hospedados nela. O que permite que um logon unico após ser feita a autenticação pela microsoft.
+
+
+
+B2C (Bussiness to Consumer) - A pessoa não precisa fornecer os dados para mim para logar, ela pode logar com a conta da microsoft, do google e etc
+B2B (Bussiness to Bussiness)
+
+Ao criar um usuário on Premise, ele é replicado na nuvem automaticamente, mas não é o mesmo para o contrário. 
+
+Autentitação permite acessar a microsoft, mas mesmo autenticado, ele precisa da autorização para acessar o conteúdo dentro dela, a autorização vai definir o nível de acesso que o usuário terá.

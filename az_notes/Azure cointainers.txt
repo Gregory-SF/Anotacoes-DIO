@@ -1,0 +1,7 @@
+Serciço ACR (Registro de Conteiner do Azure)
+
+Existem tarefas que podem ser criadas
+
+Tarefas rápidas (tipo scanear pra ver se tem uma vulnerabilidade na imagem)
+Tarefas disparadas automaticamente (tipo agendar pra fazer deploy num dia e hora específica)
+Tarefa de vária etapas (tipo ter um processo com várias etapas de build num arquivo yaml)

@@ -1,0 +1,20 @@
+O dimensionamento automático
+Ajusta o número de instâncias disponíveis, não ultrapassando o limite da camada de preço. Tem como criar regras / consdições pra isso acontecer, essas regras são feitas baseadas em métricas
+
+Algukas métricas podem ser:
+Percentual de CPU;
+Porcentagem de memória;
+Comprimento da fila de disco - solicitações de E/S pendentes;
+Comprimento da fila HTTP - número de solicitações do cliente;
+Entrada de dados - números de bytes recebidos;
+Saída de dados - números de bytes enviados;
+
+É impoirtante monitorar as métricas
+
+é possível trabalhar com várias métricas em conjunto.
+
+Importante se atentar aos cronogramas e alterar as métricas de acordo, por exemplo black friday, promoção e etc que podem auemntar do nada. 
+
+
+Por exemplo, o recurso trabalha bem confortável com 1 instância com 100 requesições, ai teve um pico de aumento pra 200 requisições, ai gera uma segunda instância, passado esse pique, volta ao normal de 100 requisições, ai a segunda intância é desfeitas
+O dimensionamento automático não está disponível em todas camadas / planos. Cuidado
